@@ -31,13 +31,14 @@ export class Party
 
         this.MyEvent.AddEvent('click', (v:MouseEvent)=>
         {
+            console.log("")
              let valid_tiles = ([].concat(this.Player_1.Pions.Pions_Instances)).concat(this.Player_2.Pions.Pions_Instances)
              
-             let origin_x =  (v.x-((window.innerWidth/2)-(751/2) ))+2
-             let origin_y =  v.y-((window.innerHeight/2)-(751/2))
-
-             let offset_tile_mouse_x = Math.floor(origin_x/75)
-             let offset_tile_mouse_y = Math.floor(origin_y/75)
+             let origin_x =  Math.abs(v.x-((window.innerWidth/2)-(751/2) ))+2
+             let origin_y =  Math.abs(v.y-((window.innerHeight/2)-(751/2)))
+            console.log("origin_x = ",origin_x, " v.x = ",v.x)
+             let offset_tile_mouse_x = Math.abs(Math.floor(origin_x/75))
+             let offset_tile_mouse_y = Math.abs(Math.floor(origin_y/75))
 
             let positioned = false
 
@@ -81,3 +82,4 @@ export class Party
         
     }
 }
+
