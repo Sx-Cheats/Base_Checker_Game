@@ -37,3 +37,4 @@ Object.values(tiles.getElementsByTagName('div')).forEach((value,index)=>{
 })
 
 let _Party = new Party(canvas,{Name:"BOB",Color:Player_1_Color},{Name:"PIERRE",Color:Player_2_Color})
+
