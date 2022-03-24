@@ -13,7 +13,7 @@ export class Pion
 
         tile_position = tile_position.toLowerCase()
         if (tile_position != "up" && tile_position != "down") {
-            throw 'Error Invalid tile position, use UP/Down'
+            throw 'Error Invalid tile position, use up/down'
             
         }
 
